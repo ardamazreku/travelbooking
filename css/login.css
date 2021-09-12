@@ -84,6 +84,7 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
+  height: auto;
   background: whitesmoke;
   border-radius: 10px;
   box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
@@ -95,7 +96,7 @@ body{
   color: #e08d3c;
 }
 .center form{
-  padding: 0 40px;
+  padding: 0 30px;
   box-sizing: border-box;
 }
 form .txt_field{

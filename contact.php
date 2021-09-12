@@ -6,8 +6,8 @@ $message = '';
 
 if(isset($_POST["send"]))
 {
-    $email = $_SESSION['email'];
-	$message = '
+    $email = $_POST['email'];
+    $message = '
 		<h3 align="center">Programmer Details</h3>
 		<table border="1" width="100%" cellpadding="5" cellspacing="5">
 			
@@ -25,10 +25,10 @@ if(isset($_POST["send"]))
 				<td width="30%">Message</td>
 				<td width="70%">'.$_POST["message"].'</td>
 			</tr>
+			  
 		</table>
-	';	
+	';
 }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -88,9 +88,7 @@ if(isset($_POST["send"]))
     </p>
   </div>
  </center>
-     
     <br>
-    
    <!-- Message -->
     <h1 class="heading">
         <span>M</span>
@@ -101,18 +99,23 @@ if(isset($_POST["send"]))
         <span>G</span>
         <span>E</span>
     </h1>
-    
+
     <div class="row">
         <div class="image">
             <img src="images/contact-img.svg" alt="">
         </div>
 
-        <form action="">
+        <form method="post">
+            <div class="inputBox">
+                    <input type="text" placeholder="Email" name="email">
+            </div>
             <div class="inputBox">
                 <input type="text" placeholder="Title" name="title">
             </div>
             <textarea placeholder="Message" name="message" cols="30" rows="10"></textarea>
-            <input type="submit" class="btn" name="send" value="Send"> 
+            <div class="send">
+                <input type="submit" class="btn" name="send" value="Send">
+            </div>
         </form>
     </div>  
 </section>
@@ -133,66 +136,66 @@ if(isset($_POST["send"]))
   </center>
 
 <!-- contact section ends --> 
-    
+
+<?php include "includes/template/footer.php";?>
+
+<?php
+$conn=mysqli_connect("localhost","root","","travelbooking");
+mysqli_select_db($conn,'travelbooking');
+
+$email = $_POST['email'];
+$errors = array();
+
+if(isset($_POST['send'])){
+
+    $title = mysqli_real_escape_string($conn,$_POST['title']);
+    $message = mysqli_real_escape_string($conn,$_POST['message']);
+
+    if (empty($title)){
+        array_push($errors, "Title is required");
+    }
+
+
+    if (empty($message)){
+        array_push($errors, "Message is required");
+    }
+
+    $query = "SELECT * FROM inbox WHERE title='$title' OR message='$message' LIMIT 1";
+
+    $result = mysqli_query($conn, $query);
+    $user = mysqli_fetch_assoc($result);
+    // if user exists
+    if ($user)
+    {
+
+        if ($user['message'] === $message)
+        {
+            array_push($errors, "The message has been sent successfully!");
+        }
+    }
+
+    if (count($errors) == 0){
+
+        $regist ="INSERT INTO inbox (email, title, message)
+              VALUES ('$email', '$title','$message')";
+
+        $rows = "SELECT * FROM inbox WHERE email='$email' AND message='$message'";
+
+        $run = mysqli_query($conn, $rows);
+
+        if(mysqli_num_rows($run)<10){
+
+            mysqli_query($conn,$regist);
+
+            echo "<script>alert('The message has been sent successfully!');</script>";
+
+        }
+    }
+}
+?>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <!-- Js file link -->
 <script src="javascript/script.js"></script>
-    
-<?php include "includes/template/footer.php";?>
-    
-    <?php
-     $conn=mysqli_connect("localhost: 3307","root","","travelbooking");
-     mysqli_select_db($conn,'travelbooking');
-                
-    $errors = array();
-        
-    if(isset($_POST['send'])){  
-      
-        $title = mysqli_real_escape_string($conn,$_POST['title']);
-        $message = mysqli_real_escape_string($conn,$_POST['message']);
-    
-        if (empty($title)){
-            array_push($errors, "Title is required"); 
-        }
-        
-        
-        if (empty($message)){ 
-            array_push($errors, "Message is required"); 
-        }
-        
-        $query = "SELECT * FROM inbox WHERE title='$title' OR message='$message' LIMIT 1";
-            
-        $result = mysqli_query($conn, $query);
-        $user = mysqli_fetch_assoc($result);
-        // if user exists
-        if ($user)
-        { 
-            
-            if ($user['message'] === $message) 
-            {
-                array_push($errors, "The message has been sent successfully!");
-            }
-        }
-        
-            if (count($errors) == 0){
-           
-              $regist ="INSERT INTO inbox (email, title, message)
-              VALUES ('$email', '$title','$message')";
-                
-               $rows = "SELECT * FROM inbox WHERE email='$email' AND message='$message'";
-	
-               $run = mysqli_query($conn, $rows);
-	
-             if(mysqli_num_rows($run)<10){
-                   
-                 mysqli_query($conn,$regist);
-            
-                 echo "<script>alert('The message has been sent successfully!');</script>";
-    
-               }
-          }
-    }
-?>
     </body>
 </html>

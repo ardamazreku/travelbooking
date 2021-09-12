@@ -70,7 +70,7 @@ if(!isset($_SESSION['email'])){
          <input type="submit" name="signup" value="Sign up"> 
             <?php echo "<span class='error'>$errorGen<span>";?>
         <div class="signup_link">
-          Already a member? <br>
+          Already a member?
           <a href="login.php">Log in</a>
         </div>
       </form>

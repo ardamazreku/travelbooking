@@ -721,6 +721,11 @@ header .search-bar-container label:hover{
     width: 450px;
 }
 
+.error{
+  color: red;
+  font-size: 20px;
+}
+
 .travel{
     font-size: 40px;
     color: #C19A6B;
@@ -729,12 +734,6 @@ header .search-bar-container label:hover{
 .location{
     font-size: 25px;
     color: #C19A6B;
-}
-
-.thecontainer 
-{
-	width: 100%;
-	height: auto;
 }
 
 @media (max-width:450px){
@@ -750,7 +749,6 @@ header .search-bar-container label:hover{
   .contact .row form .inputBox input{
     width:100%;
   }
-
 }
 
 .footer-copyright{

@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,7 +54,7 @@
 
 				//punetor
 				else if($_SESSION['roli'] == 3){
-                    echo '<a href="packages.php"> PACKAGES </a>';
+				    echo '<a href="bookP.php"> BOOK </a>';
                        
 				}
 			}
@@ -140,10 +144,17 @@
        <p class="p2"> When we power more travel, we unleash more opportunities to strengthen connections, broaden horizons and bridge divides.
        <br>
       Our mission is to power global travel for everyone, everywhere. </p>
-  
-    </center>
+
     <br>
-    
+
+    <img src="images/a1.jpg" width="360px" height="370px">
+    <img src="images/a2.jpg" width="400px" height="350px">
+    <img src="images/a3.jpg" width="460px" height="350px">
+    <a href="book.php"> <h1> BOOK YOUR TICKETS NOW! </h1> </a>
+
+</center>
+<br>
+
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <!-- Js file link -->

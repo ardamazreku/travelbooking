@@ -1,8 +1,8 @@
 <div class="topnav" id="myTopnav">
-        <a href="index.php">HOME</a>
-        <a href="aboutus.php">ABOUT US</a>
-        <a href="gallery.php">GALLERY</a>
-    
+    <a href="index.php">HOME</a>
+    <a href="aboutus.php">ABOUT US</a>
+    <a href="gallery.php">GALLERY</a>
+
     <div class="icons">
         <i class="fas fa-search" id="search-btn"></i>
         <i class="fas fa-user" id="login-btn"> </i>
@@ -31,8 +31,8 @@
 
 				//punetor
 				else if($_SESSION['roli'] == 3){
-                    echo '<a href="packages.php"> PACKAGES </a>';
-                       
+                    echo '<a href="bookP.php"> BOOK </a>';
+
 				}
 			}
 

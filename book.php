@@ -58,40 +58,40 @@ if(isset($_SESSION['email'])) {
         <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" method = "POST">     
                <div class="inputBox">
                 <h3> ✈ Leaving from </h3>
-                <input type="text" placeholder="Place name" value="<?php echo $leaving; ?>">
+                <input type="text" name="leaving" placeholder="Place name" value="<?php echo $leaving; ?>">
             </div>
                  <?php echo "<span class='error'>$errorLeaving<span>";?>
             <div class="inputBox">
                 <h3> ✈ Going to </h3>
-                <input type="text" placeholder="Place name" value="<?php echo $going; ?>">
+                <input type="text" name="going" placeholder="Place name" value="<?php echo $going; ?>">
             </div>
                  <?php echo "<span class='error'>$errorGoing<span>";?>
             <div class="inputBox">
                 <h3> How many people? </h3>
-                <input type="number" placeholder="" value="<?php echo $nripersonave; ?>">
+                <input type="number" name="nripersonave" value="<?php echo $nripersonave; ?>">
             </div>
                  <?php echo "<span class='error'>$errorNriPersonave<span>";?>
             <div class="inputBox">
                 <h3> Departing </h3>
-                <input type="date" value="<?php echo $departing; ?>">
+                <input type="date" name="departing" value="<?php echo $departing; ?>">
             </div>
                 <?php echo "<span class='error'>$errorDeparting<span>";?>
             <div class="inputBox">
                 <h3> Returning </h3>
-                <input type="date" value="<?php echo $returning; ?>">
+                <input type="date" name="returning" value="<?php echo $returning; ?>">
             </div>
                <?php echo "<span class='error'>$errorReturning<span>";?>
              <div class="inputBox">
                 <h3> Email </h3>
-                <input type="text" value="<?php echo $email; ?>">
+                <input type="text" name="email" value="<?php echo $email; ?>">
             </div>
                <?php echo "<span class='error'>$errorEmail<span>";?>
-            <input type="submit" class="btn" name="send" value="Book now">
+                <input type="submit" class="btn" name="send" placeholder="Your email" value="Book now">
                <?php echo "<span class='error'>$errorGen<span>";?>
          </form>
        </div>
     </section>
-    
+
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <!-- Js file link -->

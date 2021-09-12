@@ -1,19 +1,19 @@
 <?php
-    
+
+//konektimi me db
+$server = 'localhost:3306';
+$user = 'root';
+$password = '';
+$dbName = 'travelbooking';
+
+$connect = mysqli_connect($server,$user,$password,$dbName);
+
 $leaving = $_POST['leaving'];
 $going = $_POST['going'];
 $nripersonave = $_POST['nripersonave'];
 $departing = $_POST['departing'];
 $returning = $_POST['returning'];
 $email = $_POST['email'];
-
-//konektimi me db
-$server = 'localhost:3307';
-$user = 'root';
-$password = '';
-$dbName = 'travelbooking';
-
-$connect = mysqli_connect($server,$user,$password,$dbName);
 
   //Kjo pjese na nevojitet te shikojme nese ekziston perdoruesi me email te njejte
   $queryEmail = mysqli_query($connect, "SELECT * FROM booking WHERE email='$email';");
@@ -88,8 +88,9 @@ $connect = mysqli_connect($server,$user,$password,$dbName);
 		//funksioni ne vazhdim perdoret per te ekzekutuar deklarata te shumta te sql query ne mysql
 		if (mysqli_multi_query($connect, $querysql)){
             echo '<script type="text/javascript">';
-            echo 'alert("Reservation is completed successfully!")';  
+            echo 'alert("Booking is completed successfully!")';
             echo '</script>';
 		 }
       }
    }
+?>

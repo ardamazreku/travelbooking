@@ -53,7 +53,7 @@ if(!isset($_SESSION['email'])) {
        <input type="submit" name="register" value="Log in"> 
         <?php echo "<span class='error'>$errorGen<span>";?>
         <div class="signup_link">
-          Not a member? <br> 
+          Not a member?
         <a href="signup.php">Sign up</a>
         </div>
       </form>

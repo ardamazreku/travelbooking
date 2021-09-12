@@ -1,7 +1,7 @@
 <?php
 
 //konektimi me db
-$server = 'localhost:3306';
+$server = 'localhost:3307';
 $user = 'root';
 $password = '';
 $dbName = 'travelbooking';
@@ -22,7 +22,7 @@ $connect = mysqli_connect($server,$user,$password,$dbName);
 
     //errori i pergjithshem
     if(empty($username) && empty($surname) && empty($email) && empty($password_1) && empty($password_2)){
-	   $errorGen = "Te gjitha fushat duhet te plotesohen!";
+	   $errorGen = "All fields are required!";
 	   $register = false;
    }
 
@@ -30,35 +30,35 @@ $connect = mysqli_connect($server,$user,$password,$dbName);
     //nese fusha e emrit eshte e zbrazet
     else {
 	   if(empty($username)){
-		$errorName = "Fusha e emrit duhet te plotesohet!";
+		$errorName = "Name field is required!";
 		$register = false;
 	}
     
     //nese emri permban edhe karaktere tjera jo-shkronje
 	else {
 		if(!preg_match("/^[a-zA-Z ]*$/", $username)){
-			$errorName = "Emri duhet te permbaje vetem shkronja!";
+			$errorName = "The name must contain only letters!";
 			$register = false;
 		}
 	}
 
     //nese fusha e mbiemrit eshte e zbrazet
 	if(empty($surname)){
-		$errorSurname = "Fusha e mbiemrit duhet te plotesohet!";
+		$errorSurname = "Surname field is required!";
 		$register = false;
 	}
     
     //nese mbiemri permban edhe karaktere tjera jo-shkronje
     else {
 		if(!preg_match("/^[a-zA-Z ]*$/", $surname)){
-			$errorSurname = "Mbiemri duhet te permbaje vetem shkronja!";
+			$errorSurname =  "The surname must contain only letters!";
 			$register = false;
         }
     }
     
 	//nese fusha e email adreses eshte e zbrazet
 	if(empty($email)) {
-		$errorEmail = "Fusha e email adreses duhet te plotesohet!";
+		$errorEmail = "Email address field is required!";
 		$register = false;
 	}
     
@@ -66,19 +66,19 @@ $connect = mysqli_connect($server,$user,$password,$dbName);
 	else {
 		//nese formati i email adreses se shenuar nuk eshte i sakte
 		if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-			$errorEmail = "Formati i email adreses nuk eshte i sakte!";
+			$errorEmail = "The email address format is incorrect!";
 			$register = false;
 		}
         
 		//nese ekziston nje perdorues qe e ka kete email adrese
 		else if($countEmail != 0){
-			$errorEmail = "Ky perdorues tashme ekziston!";
+			$errorEmail = "This user doesn't exist!";
 			$register = false;
 		}
 	}
     
 	if(empty($password_1)){
-		$errorPassword1 = "Fusha e fjalekalimit duhet te plotesohet!";
+		$errorPassword1 = "Password field is required!";
 		$register = false;
 	}
 
@@ -91,15 +91,15 @@ $connect = mysqli_connect($server,$user,$password,$dbName);
      //nese fjalekalimi eshte i dobet
     //nese nuk plotesohet njeri nga kushtet e meposhtem atehere konsiderohet qe fjalekalimi eshte i dobet
      if(!$uppercase || !$lowercase || !$number || strlen($password_1) < 6){
-        $errorPassword1 = "Fjalekalimi i dobet!";
-    	$errorPassTooltip = "Fjalekalimi duhet te permbaje te pakten 6 karaktere dhe duhet te perfshije te pakten nje shkronje te madhe dhe nje numer!";
+        $errorPassword1 = "Weak password!";
+    	$errorPassTooltip = "Password must contain at least 6 characters, one capital letter and a number!";
         $register = false;
 		}
 	}
     
     if($password_1 != $password_2)
     {
-        $errorPassword2 ="Fusha confirm password duhet te jete e njejte me fushen password!";
+        $errorPassword2 ="The confirm password field must be the same as the password field!";
         $register=false;
     }
 

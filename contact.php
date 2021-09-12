@@ -6,7 +6,7 @@ $message = '';
 
 if(isset($_POST["send"]))
 {
-    $email = $_POST['email'];
+    $email = $_SESSION['email'];
     $message = '
 		<h3 align="center">Programmer Details</h3>
 		<table border="1" width="100%" cellpadding="5" cellspacing="5">
@@ -107,9 +107,6 @@ if(isset($_POST["send"]))
 
         <form method="post">
             <div class="inputBox">
-                    <input type="text" placeholder="Email" name="email">
-            </div>
-            <div class="inputBox">
                 <input type="text" placeholder="Title" name="title">
             </div>
             <textarea placeholder="Message" name="message" cols="30" rows="10"></textarea>
@@ -140,10 +137,10 @@ if(isset($_POST["send"]))
 <?php include "includes/template/footer.php";?>
 
 <?php
-$conn=mysqli_connect("localhost","root","","travelbooking");
+$conn=mysqli_connect("localhost: 3307","root","","travelbooking");
 mysqli_select_db($conn,'travelbooking');
 
-$email = $_POST['email'];
+$email = $_SESSION['email'];
 $errors = array();
 
 if(isset($_POST['send'])){

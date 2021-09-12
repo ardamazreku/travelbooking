@@ -1,7 +1,7 @@
 <?php
 
 //konektimi me db
-$server = 'localhost:3306';
+$server = 'localhost:3307';
 $user = 'root';
 $password = '';
 $dbName = 'travelbooking';
@@ -19,7 +19,7 @@ $connect = mysqli_connect($server,$user,$password,$dbName);
     //validimi i te dhenave hyrese
     //nese asnjera nga fushat nuk eshte plotesuar
     if(empty($email) && empty($password)){
-	$errorGen = "Te gjitha fushat duhet te plotesohen!";
+	$errorGen = "All fields are required!";
 	$login = false;
     }
 
@@ -27,7 +27,7 @@ $connect = mysqli_connect($server,$user,$password,$dbName);
 	//validimi i email-it
 	//nese emaili eshte i zbrazet
 	if(empty($email)){
-		$errorEmail = "Fusha e email-it duhet te plotesohet!";
+		$errorEmail = "Email field is required!";
 		$login = false;
 	}
         
@@ -39,14 +39,14 @@ $connect = mysqli_connect($server,$user,$password,$dbName);
 
 		//nese nuk ka rreshta rezultat => perdoruesi nuk ekziston
 		if($count1 == 0){
-			$errorEmail = "Ky perdorues nuk ekziston!";
+			$errorEmail = "This user doesn't exist!";
 			$login = false;
 		}
 	}
 
 	//nese fjalekalimi eshte i zbrazet
 	if(empty($password)){
-		$errorPassword = "Fusha e fjalekalimit duhet te plotesohet!";
+		$errorPassword = "Password field is required!";
 		$login = false;
 	}
     //nese fjalekalimi per kete perdorues nuk eshte i sakte
@@ -58,7 +58,7 @@ $connect = mysqli_connect($server,$user,$password,$dbName);
         //koment
 		//nese vlerat e fjalekalimeve nuk perputhen
 		if($passwordDB != $password){
-			$errorPassword = "Fjalekalimi nuk eshte i sakte!";
+			$errorPassword = "The password is incorrect!";
 			$login = false;
 		}
 	}

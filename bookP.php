@@ -39,7 +39,7 @@ session_start();
      <!-- php -->     
      <tbody>
       <?php 
-      $con=mysqli_connect("localhost","root","","travelbooking");
+      $con=mysqli_connect("localhost: 3307","root","","travelbooking");
       mysqli_select_db($con,"travelbooking");
 
       $query = "SELECT * from booking order by 1 DESC";

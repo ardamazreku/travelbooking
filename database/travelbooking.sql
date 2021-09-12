@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Sep 11, 2021 at 03:00 PM
--- Server version: 10.4.10-MariaDB
--- PHP Version: 7.3.12
+-- Host: 127.0.0.1:3307
+-- Generation Time: Sep 12, 2021 at 02:07 PM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -58,7 +57,8 @@ CREATE TABLE IF NOT EXISTS `inbox` (
 --
 
 INSERT INTO `inbox` (`email`, `title`, `message`) VALUES
-('vlera.j@gmail.com', 'Hello!', 'I love your page! This is the best account for travel!');
+('vlera.j@gmail.com', 'Hi!', 'I love your page!'),
+('ardamazreku@gmail.com', 'Hello!', 'I love your account! Its the best for traveling!');
 
 -- --------------------------------------------------------
 
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `perdoruesi` (
   `roli` int(1) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `roli` (`roli`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `perdoruesi`
@@ -99,7 +99,8 @@ CREATE TABLE IF NOT EXISTS `perdoruesi` (
 INSERT INTO `perdoruesi` (`id`, `emri`, `mbiemri`, `email`, `password`, `roli`) VALUES
 (1, 'Festa', 'Mazreku', 'festamazreku@gmail.com', 'Festa99!', 1),
 (2, 'Vlera', 'Januzi', 'vlera.j@gmail.com', 'Vlera98', 2),
-(3, 'Erisa', 'Bytyqi', 'erisab@gmail.com', 'Erisa2000', 3);
+(3, 'Erisa', 'Bytyqi', 'erisab@gmail.com', 'Erisa2000', 3),
+(4, 'Arda', 'Mazreku', 'ardamazreku@gmail.com', 'Arda99', 2);
 
 -- --------------------------------------------------------
 

@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3307
--- Generation Time: Sep 12, 2021 at 02:07 PM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.3.21
+-- Host: 127.0.0.1:3306
+-- Generation Time: Sep 21, 2021 at 08:19 PM
+-- Server version: 10.4.10-MariaDB
+-- PHP Version: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -20,24 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `travelbooking`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `booking`
---
-
-DROP TABLE IF EXISTS `booking`;
-CREATE TABLE IF NOT EXISTS `booking` (
-  `b_id` int(10) NOT NULL AUTO_INCREMENT,
-  `leaving` varchar(15) NOT NULL,
-  `going` varchar(15) NOT NULL,
-  `nripersonave` int(15) NOT NULL,
-  `departing` date NOT NULL,
-  `returning` date NOT NULL,
-  `email` varchar(30) NOT NULL,
-  PRIMARY KEY (`b_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -57,22 +40,7 @@ CREATE TABLE IF NOT EXISTS `inbox` (
 --
 
 INSERT INTO `inbox` (`email`, `title`, `message`) VALUES
-('vlera.j@gmail.com', 'Hi!', 'I love your page!'),
-('ardamazreku@gmail.com', 'Hello!', 'I love your account! Its the best for traveling!');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `kartela`
---
-
-DROP TABLE IF EXISTS `kartela`;
-CREATE TABLE IF NOT EXISTS `kartela` (
-  `card_number` int(80) NOT NULL,
-  `emri_mbiemri` varchar(50) NOT NULL,
-  `expiration_date` int(15) NOT NULL,
-  `card_verification_value` int(10) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+('vlera.j@gmail.com', 'Hello!', 'I love your page!  It helped me a lot! Thanks! ');
 
 -- --------------------------------------------------------
 
@@ -99,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `perdoruesi` (
 INSERT INTO `perdoruesi` (`id`, `emri`, `mbiemri`, `email`, `password`, `roli`) VALUES
 (1, 'Festa', 'Mazreku', 'festamazreku@gmail.com', 'Festa99!', 1),
 (2, 'Vlera', 'Januzi', 'vlera.j@gmail.com', 'Vlera98', 2),
-(3, 'Erisa', 'Bytyqi', 'erisab@gmail.com', 'Erisa2000', 3),
+(3, 'Erisa', 'Bytyqi', 'erisab@gmail.com', 'Erisa2000', 2),
 (4, 'Arda', 'Mazreku', 'ardamazreku@gmail.com', 'Arda99', 2);
 
 -- --------------------------------------------------------
@@ -121,8 +89,7 @@ CREATE TABLE IF NOT EXISTS `roli` (
 
 INSERT INTO `roli` (`roli`, `r_pershkrimi`) VALUES
 (1, 'Administratori'),
-(2, 'Klienti'),
-(3, 'Punetori');
+(2, 'Klienti');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

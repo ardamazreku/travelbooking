@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Traveltocity </title>
+    <title> Travelocity </title>
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
@@ -37,7 +37,7 @@ session_start();
 <section class="home" id="home">
 
     <div class="content">
-        <h3 class="title">Book with us!</h3>
+        <h3 class="title">WELCOME!</h3>
         <p class="title">Discover new places, adventure awaits! 
         <br> Take the dream vacation you've been waiting for!</p>
         <a href="aboutus.php" class="btn">About us</a>

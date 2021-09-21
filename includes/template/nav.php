@@ -1,7 +1,6 @@
 <div class="topnav" id="myTopnav">
     <a href="index.php">HOME</a>
     <a href="aboutus.php">ABOUT US</a>
-    <a href="gallery.php">GALLERY</a>
 
     <div class="icons">
         <i class="fas fa-search" id="search-btn"></i>
@@ -24,18 +23,11 @@
 
 				//klient
 				else if($_SESSION['roli'] == 2){
-                    echo '<a href="packages.php"> PACKAGES </a>
-						  <a href="book.php"> BOOK </a>
+                    echo '<a href="gallery.php">GALLERY</a>
+                          <a href="book.php"> BOOK </a>
                           <a href="contact.php"> CONTACT </a>';
                 }
-
-				//punetor
-				else if($_SESSION['roli'] == 3){
-                    echo '<a href="bookP.php"> BOOK </a>';
-
-				}
 			}
-
 			echo '<a href = "includes/validate/logout.php"> LOG OUT </a>';
 		}
 	?>

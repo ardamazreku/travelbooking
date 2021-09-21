@@ -4,13 +4,12 @@
 
         <div class="box">
             <h3>Company</h3>
-            <p>Traveltocity</p>
+            <p>Travelocity</p>
         </div>
         <div class="box">
             <h3>Links</h3>
             <a href="index.php">Home</a>
             <a href="aboutus.php">About us</a>
-            <a href="packages.php">Packages</a>
             <a href="book.php">Book</a>
             <a href="gallery.php">Gallery</a>
             <a href="contact.php">Contact</a>
@@ -18,7 +17,7 @@
         <div class="box">
             <h3>Contact us </h3>
             <p> Address: New York, NY 10012, US </p>
-            <p> Email: traveltocity@gmail.com </p>
+            <p> Email: travelocity@gmail.com </p>
             <p> Telephone: + 01 234 567 88 </p>
         </div>  
        <center>

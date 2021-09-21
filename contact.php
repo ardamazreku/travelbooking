@@ -77,7 +77,7 @@ if(isset($_POST["send"]))
     Address: New York, NY 10012, US 
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>  <br>
-    Email: traveltocity@gmail.com 
+    Email: travelocity@gmail.com
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" 
     class="bi bi-envelope-fill" viewBox="0 0 16 16">
     <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/></svg> <br>
@@ -89,6 +89,7 @@ if(isset($_POST["send"]))
   </div>
  </center>
     <br>
+
    <!-- Message -->
     <h1 class="heading">
         <span>M</span>
@@ -117,7 +118,7 @@ if(isset($_POST["send"]))
     </div>  
 </section>
     
-    <!-- Map -->
+ <!-- Map -->
   <center>
      <section id="contact" class="py-5"> 
       <h1 class="location"> OUR LOCATION
@@ -137,7 +138,7 @@ if(isset($_POST["send"]))
 <?php include "includes/template/footer.php";?>
 
 <?php
-$conn=mysqli_connect("localhost: 3307","root","","travelbooking");
+$conn=mysqli_connect("localhost: 3306","root","","travelbooking");
 mysqli_select_db($conn,'travelbooking');
 
 $email = $_SESSION['email'];

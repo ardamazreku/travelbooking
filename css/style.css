@@ -1,5 +1,5 @@
 :root{
-  --gray: #D8D8D8;
+  --black: #181818;
 }
 
 *{
@@ -13,7 +13,7 @@
 }
 
 *::selection{
-  background: #343434;
+  background: var(--#B8B8B8);
   color:#fff;
 }
 
@@ -158,8 +158,6 @@ header .search-bar-container label:hover{
   height: auto;
 }
 
-/* Log in */
-
 .login-form-container{
   position: fixed;
   top:-120%; left: 0;
@@ -256,7 +254,7 @@ header .search-bar-container label:hover{
 }
 
 .topnav a:hover{
-  background-color: #242124;
+  background-color: #D0D0D0;
   color: black;
 }
 
@@ -632,7 +630,6 @@ header .search-bar-container label:hover{
   section{
     padding:2rem;
   }
-
 }
 
 .a{
@@ -656,8 +653,8 @@ header .search-bar-container label:hover{
 
 .p4{
     font-size: 35px;
-    color: black;
-    background-color: gainsboro;
+    color: lightgray;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/clouds.jpeg") center/cover no-repeat;
     opacity: 0.8;
     height: 130px;
     width: 450px;
@@ -691,11 +688,6 @@ header .search-bar-container label:hover{
   .contact .row form .inputBox input{
     width:100%;
   }
-}
-
-.footer-copyright{
-    color: whitesmoke;
-    font-size: 20px;
 }
 
 #pictures{
@@ -764,7 +756,6 @@ header .search-bar-container label:hover{
     color:var(--orange);
 }
 
-
 .footer{
   background: #000;
 }
@@ -800,7 +791,7 @@ header .search-bar-container label:hover{
 }
 
 .footer .box-container .box a:hover{
-  color:var(--orange);
+  color:var(--gray);
   text-decoration: underline;
 }
 
@@ -815,7 +806,12 @@ header .search-bar-container label:hover{
 }
 
 .footer .credit span{
-  color:var(--orange);
+  color:var(--gray);
+}
+
+.footer-copyright{
+  color: whitesmoke;
+  font-size: 20px;
 }
 
 .p-copyright{

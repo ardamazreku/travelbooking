@@ -9,11 +9,11 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> About us </title>
 
-    <!-- Bootstrap -->    
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
+
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    
+
     <!-- Logo -->
     <link rel='shortcut icon' type='image/x-icon' href='images/travel.png'/>
 
@@ -77,7 +77,7 @@ session_start();
       </div>
      </div>
    </div>
-    
+
    <h1 class="heading">
         <span>W</span>
         <span>H</span>
@@ -118,29 +118,22 @@ session_start();
        <div class="row">
          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
            <img src="images/travel1.jpeg" class="img-fluid" alt="Responsive image">
-         </div> 
+         </div>
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
       <img src="images/travel3.jpeg" class="img-fluid" alt="Responsive image">
-     </div> 
+     </div>
          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
            <img src="images/travel4.jpeg" class="img-fluid" alt="Responsive image">
              </div>
            </div>
         </section>
     </section>
-    
+
       <p class="p2"> No matter who you are, or where you are going, our travel brands help every type of traveler not only find the trip that’s right for them, but get the best value every time. </p>
       
        <p class="p2"> When we power more travel, we unleash more opportunities to strengthen connections, broaden horizons and bridge divides.
        <br>
       Our mission is to power global travel for everyone, everywhere. </p>
-
-    <br>
-
-    <img src="images/a1.jpg" width="360px" height="370px">
-    <img src="images/a2.jpg" width="400px" height="350px">
-    <img src="images/a3.jpg" width="460px" height="350px">
-    <a href="book.php"> <h1> BOOK YOUR TICKETS NOW! </h1> </a>
 
 </center>
 <br>

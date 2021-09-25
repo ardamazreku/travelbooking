@@ -70,11 +70,11 @@ if(isset($_POST["send"]))
     </h1>
     
   <center>
-      <img src="images/contact.jpeg" alt="" class="responsive">
+      <img src="images/contactus.jpeg" alt="" class="responsive">
       <br>
       <div class="contact">
           <p class="p4">
-    Address: New York, NY 10012, US 
+    Address: New York, NY 10012, US
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>  <br>
     Email: travelocity@gmail.com
@@ -117,19 +117,19 @@ if(isset($_POST["send"]))
         </form>
     </div>  
 </section>
-    
- <!-- Map -->
-  <center>
-     <section id="contact" class="py-5"> 
-      <h1 class="location"> OUR LOCATION
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" 
-      class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
-     </h1>
-     <br>
-     <div class="row"> 
-     <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=new york &amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.embedmymap.com/">Embed My Map</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style></div>
-     </div>     
+
+<!-- Map -->
+<center>
+    <section id="contact" class="py-5">
+        <h1 class="location"> OUR LOCATION
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+            class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+        </h1>
+        <br>
+        <div class="row">
+            <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=new york &amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.embedmymap.com/">Embed My Map</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style></div>
+        </div>
     </section>
   </center>
 

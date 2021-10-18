@@ -35,7 +35,7 @@ if(!isset($_SESSION['email'])) {
             <div class="card">
                 <div class="card-body text-center">
                     <div class="mb-4">
-                        <img class="carousel-control-next-icon" src="../public/favicon.png" alt="">
+                        <img class="carousel-control-next-icon" src="../public/admin.png" alt="">
                     </div>
                     <h6 class="mb-4 text-muted">Create new account</h6>
                     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
@@ -49,7 +49,7 @@ if(!isset($_SESSION['email'])) {
                         </div>
                         <input type="hidden" name="nickname" value="<?php echo $nickname; ?>">
                         <div class="mb-3 text-start">
-                            <label for="email" class="form-label">Email adress</label>
+                            <label for="email" class="form-label">Email</label>
                             <input type="email" name="email" class="form-control" placeholder="Enter Email" value="<?php echo $email;?>" required>
                         </div>
                         <div class="mb-3 text-start">

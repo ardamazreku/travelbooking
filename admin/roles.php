@@ -1,8 +1,8 @@
 <?php
 session_start();
-if(isset($_SESSION['email']) && isset($_SESSION['roli_id'])) {
+if(isset($_SESSION['email']) && isset($_SESSION['roli'])) {
 
-if($_SESSION['roli_id'] == 1) {
+if($_SESSION['roli'] == 1) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,8 +42,8 @@ if($_SESSION['roli_id'] == 1) {
                                     <div class="card-body">
                                         <h5 class="card-title">New role</h5>
                                         <?php
-                                            $id = $roli = "";
-                                            $errorID = $errorRoli = $errorGen = "";
+                                            $roli = $r_pershkrimi = "";
+                                            $errorRoli = $errorR_pershkrimi = $errorGen = "";
                                             if($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 include 'src/validate/addRoli.php';
                                             }
@@ -52,15 +52,15 @@ if($_SESSION['roli_id'] == 1) {
                                             <div class="row g-2">
                                                 <div class="col">
                                                     <label for="name" class="form-label sr-only">ID</label>
-                                                    <input name="id" type="number" placeholder="Role ID" class="form-control" value="<?php echo $id; ?>">
+                                                    <input name="roli" type="number" placeholder="Role ID" class="form-control" value="<?php echo $roli; ?>">
                                                     <br />
-                                                    <?php echo "<span style='color: red;'>$errorID<span>";?>
+                                                    <?php echo "<span style='color: red;'>$errorRoli<span>";?>
                                                 </div>
                                                 <div class="col">
                                                     <label for="username" class="form-label sr-only">Role</label>
-                                                    <input type="text" name="roli" placeholder="Description" class="form-control" value="<?php echo $roli; ?>">
+                                                    <input type="text" name="r_pershkrimi" placeholder="Description" class="form-control" value="<?php echo $r_pershkrimi; ?>">
                                                     <br />
-                                                    <?php echo "<span style='color: red;'>$errorRoli<span>";?>
+                                                    <?php echo "<span style='color: red;'>$errorR_pershkrimi<span>";?>
                                                     <br />
                                                     <?php echo "<span style='color: red;'>$errorGen<span>";?>
                                                 </div>
@@ -94,12 +94,12 @@ if($_SESSION['roli_id'] == 1) {
                                     while($row = $result->fetch_assoc()):
                                 ?>
                                     <tr>
-                                        <td title="id"><?= $row['id'] ?></td>
-                                        <td><?= $row['roli'] ?></td>
+                                        <td title="roli"><?= $row['roli'] ?></td>
+                                        <td><?= $row['r_pershkrimi'] ?></td>
                                         <td class="text-end">
                                             <a href="permissions.html" class="btn btn-outline-secondary btn-rounded"><i class="fas fa-toggle-on"></i></a>
                                             <a href="" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
-                                            <a href="src/validate/deleteRoliDB.php?id=<?=$row['id']?>" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                                            <a href="src/validate/deleteRoliDB.php?id=<?=$row['roli']?>" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 <?php endwhile; ?>

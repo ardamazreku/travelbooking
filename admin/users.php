@@ -1,8 +1,8 @@
 <?php
 session_start();
-if(isset($_SESSION['email']) && isset($_SESSION['roli_id'])) {
+if(isset($_SESSION['email']) && isset($_SESSION['roli'])) {
 
-if($_SESSION['roli_id'] == 1) {
+if($_SESSION['roli'] == 1) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,7 +55,7 @@ if($_SESSION['roli_id'] == 1) {
                                         <td><?= $row['emri'] ?></td>
                                         <td><?= $row['mbiemri'] ?></td>
                                         <td><?= $row['email'] ?></td>
-                                        <td><?= $row['roli_id'] ?></td>
+                                        <td><?= $row['roli'] ?></td>
                                         <td>Active</td>
                                         <td class="text-end">
                                             <a href="src/validate/deleteUserDB.php?id=<?=$row['id']?>" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>

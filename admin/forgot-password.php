@@ -19,7 +19,7 @@ if(!isset($_SESSION['email'])) {
             <div class="card">
                 <div class="card-body text-center">
                     <div class="mb-4">
-                        <img class="carousel-control-next-icon" src="../public/favicon.png" alt="">
+                        <img class="carousel-control-next-icon" src="../public/admin.png" alt="">
                     </div>
                     <h6 class="mb-4 text-muted">Reset Password</h6>
                     <?php
@@ -32,7 +32,7 @@ if(!isset($_SESSION['email'])) {
                     ?>
                     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                         <div class="mb-3 text-start">
-                            <label for="email" class="form-label">Email address</label>
+                            <label for="email" class="form-label">Email</label>
                             <input name="email" type="email" class="form-control" placeholder="Enter email address" value="<?php echo $email; ?>" required>
                             <?php echo "<span style='color: red'>$errorEmail<span>";?>
                         </div>

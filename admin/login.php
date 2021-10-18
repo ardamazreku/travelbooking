@@ -22,7 +22,7 @@ if(!isset($_SESSION['email'])) {
 
             $errorGen = $errorEmail =$errorPassword= "";
 
-            $email = $pass = "";
+            $email = $password = "";
 
             //kushti if ne kete rast do te plotesohet vetem pasi klikohet butoni Submit ne formen
             if($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -39,20 +39,20 @@ if(!isset($_SESSION['email'])) {
                     <h6 class="mb-4 text-muted">Log in to your account</h6>
                     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
                         <div class="mb-3 text-start">
-                            <label for="email" class="form-label">Email address</label>
+                            <label for="email" class="form-label">Email</label>
                             <input type="email" name="email" class="form-control" placeholder="Your email" value="<?php echo $email; ?>" required>
                             <?php echo "<span style='color: red'>$errorEmail<span>";?>
                         </div>
                         <div class="mb-3 text-start">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" name="password" class="form-control" placeholder="Password" value="<?php echo $pass; ?>" required>
+                            <input type="password" name="password" class="form-control" placeholder="Password" value="<?php echo $password; ?>" required>
                             <?php echo "<span style='color: red'>$errorPassword<span>";?>
                             <?php echo "<span style='color: red'>$errorGen<span>";?>
                         </div>
                         <button class="btn btn-primary shadow-2 mb-4" type="submit">Login</button>
                     </form>
                     <p class="mb-2 text-muted">Forgot password? <a href="forgot-password.php">Reset</a></p>
-                    <p class="mb-0 text-muted">Don't have account yet? <a href="signup.php">Signup</a></p>
+                    <p class="mb-0 text-muted">Don't have account yet? <a href="signup.php">Sign up</a></p>
                 </div>
             </div>
         </div>

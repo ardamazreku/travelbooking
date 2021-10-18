@@ -1,8 +1,8 @@
 <?php
 session_start();
-if(isset($_SESSION['email']) && isset($_SESSION['roli_id'])) {
+if(isset($_SESSION['email']) && isset($_SESSION['roli'])) {
 
-    if($_SESSION['roli_id'] == 1) {
+    if($_SESSION['roli'] == 1) {
 ?>
 <!DOCTYPE html>
 <html lang="en">

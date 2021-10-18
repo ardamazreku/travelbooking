@@ -54,7 +54,7 @@ if(isset($_SESSION['email'])) {
                                             <small class="text-muted">The image must have a maximum size of 1MB</small>
                                         </div>
                                         <div class="mb-3">
-                                            <label class="form-label">Favicon</label>
+                                            <label class="form-label">Icon</label>
                                             <input class="form-control" name="favicon" type="file" id="formFile2" value="<?php echo $favicon;?>" required>
                                             <small class="text-muted">The image must have a maximum size of 1MB</small>
                                         </div>

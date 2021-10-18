@@ -1,37 +1,37 @@
 <?php
 
-$id = $_POST['id'];
 $roli = $_POST['roli'];
+$r_pershkrimi = $_POST['r_pershkrimi'];
 
 require "../database/connect.php";
 
-$addRoli = true;
+$addR_pershkrimi = true;
 
-if(empty($id) && empty($roli)) {
+if(empty($roli) && empty($r_pershkrimi)) {
     $errorGen = "Fields are required!";
-    $addRoli = false;
+    $addR_pershkrimi = false;
 }
 
 else {
-    if(empty($id)) {
-        $errorID= "ID field is required!";
-        $addRoli = false;
+    if(empty($roli)) {
+        $errorRoli= "ID field is required!";
+        $addR_pershkrimi = false;
     }
     else {
-        $number = preg_match("@[0-9]@", $id);
+        $number = preg_match("@[0-9]@", $roli);
         if(!$number) {
-            $errorID = "ID should be a number!";
-            $addRoli = false;
+            $errorRoli = "ID should be a number!";
+            $addR_pershkrimi = false;
         }
     }
 
-    if(empty($roli)) {
-        $errorRoli = "Role field is required!";
-        $addRoli = false;
+    if(empty($r_pershkrimi)) {
+        $errorR_pershkrimi = "Role field is required!";
+        $addR_pershkrimi = false;
     }
 
-    if($addRoli == true) {
-        $querysql = "INSERT INTO roli(id,roli) VALUES('$id','$roli');";
+    if($addR_pershkrimi == true) {
+        $querysql = "INSERT INTO roli(roli,r_pershkrimi) VALUES('$roli','$r_pershkrimi');";
 
         if (mysqli_multi_query($connect, $querysql)) {
             echo'<script> location.replace("roles.php"); </script>';

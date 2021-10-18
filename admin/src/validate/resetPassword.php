@@ -7,7 +7,7 @@ $newPass = $_POST['newPass'];
 
 $resetPass = true;
 
-$queryEmail = mysqli_query($connect, "SELECT email FROM perdoruesi WHERE email='$email' AND roli_id=1;");
+$queryEmail = mysqli_query($connect, "SELECT email FROM perdoruesi WHERE email='$email' AND roli =1;");
 $countEmail = @mysqli_num_rows($queryEmail);
 
 if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {

@@ -1,6 +1,6 @@
 <nav id="sidebar" class="active">
     <div class="sidebar-header">
-        <a href="index.php"><img src="../public/favicon.png" class="carousel-control-next-icon"></a>
+        <a href="index.php"><img src="../public/travel.png" class="carousel-control-next-icon"></a>
     </div>
     <ul class="list-unstyled components text-secondary">
         <li>

@@ -4,11 +4,11 @@ session_start();
 require "../../../database/connect.php";
 
 //marrja e te dhenave me metoden GET
-if(isset($_SESSION['email']) && isset($_SESSION['roli_id']) && $_SESSION['roli_id'] == 1 && isset($_GET['id'])) {
+if(isset($_SESSION['email']) && isset($_SESSION['roli']) && $_SESSION['roli'] == 1 && isset($_GET['r_pershkrimi'])) {
 
-    $id = $_GET['id'];
+    $roli = $_GET['roli'];
     //query per fshirjen e lendes perkatese
-    $deleteQuery = "DELETE FROM roli where id='$id'";
+    $deleteQuery = "DELETE FROM roli where roli ='$roli'";
 
     //ekzekutimi i query-it per fshirjen
     if(mysqli_query($connect, $deleteQuery)) {

@@ -25,8 +25,9 @@ $email = $_SESSION['email'];
                     </a>
                     <div class="dropdown-menu dropdown-menu-end nav-link-menu">
                         <ul class="nav-list">
+                            <li><a href="index.php"><i class="fas fa-home"></i>Dashboard</a></li>
                             <li><a href="profile.php" class="dropdown-item"><i class="fas fa-address-card"></i> Profile</a></li>
-                            <li><a href="settings.php" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a></li>
+
                             <div class="dropdown-divider"></div>
                             <li><a href="src/validate/logOut.php" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                         </ul>

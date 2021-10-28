@@ -1,113 +1,125 @@
 <?php
-$emri = $_POST['emri'];
-$mbiemri = $_POST['mbiemri'];
-$nickname = $_POST['nickname'];
-$email = $_POST['email'];
-$pass = $_POST['password'];
-$confirmpass = $_POST['confirmpass'];
-$data  = date('Y-m-d',strtotime('now'));
 
-require "../database/connect.php";
+//konektimi me db
+$server = 'localhost:3306';
+$user = 'root';
+$password = '';
+$dbName = 'travelbooking';
+
+$connect = mysqli_connect($server,$user,$password,$dbName);
+
+$username = $_POST['name'];
+$surname = $_POST['surname'];
+$email = $_POST['email'];
+$password_1 = $_POST['password_1'];
+$password_2 = $_POST['password_2'];
+
+//Kjo pjese na nevojitet te shikojme nese ekziston perdoruesi me email te njejte
+$queryEmail = mysqli_query($connect, "SELECT email FROM perdoruesi WHERE email='$email'");
+$countEmail = @mysqli_num_rows($queryEmail);
 
 $register = true;
 
-$queryEmail = mysqli_query($connect, "SELECT email FROM perdoruesi WHERE email='$email';");
-$countEmail = @mysqli_num_rows($queryEmail);
-
-//error te pergjithshem
-if(empty($emri) && empty($mbiemri) && empty($nickname) && empty($email) && empty($pass) && empty($confirmpass) && empty($foto)) {
+//errori i pergjithshem
+if(empty($username) && empty($surname) && empty($email) && empty($password_1) && empty($password_2)){
     $errorGen = "All fields are required!";
     $register = false;
 }
 
 //nese te pakten njera nga fushat permban nje vlere perkatese, na nevojitet ta validojme ate vlere
+//nese fusha e emrit eshte e zbrazet
 else {
-    //nese fusha e emrit eshte e zbrazet
-    if(empty($emri)) {
-        $errorEmri = "Name field is required!";
+    if(empty($username)){
+        $errorName = "Name field is required!";
         $register = false;
     }
 
-    //emri ka vlere, validoje ate
+    //nese emri permban edhe karaktere tjera jo-shkronje
     else {
-        //nese emri permban edhe karaktere tjera jo-shkronje
-        if(!preg_match("/^[a-zA-Z ]*$/", $emri)) {
-            $errorEmri = "Name should contain characters only!";
+        if(!preg_match("/^[a-zA-Z ]*$/", $username)){
+            $errorName = "The name must contain only letters!";
             $register = false;
         }
     }
+
     //nese fusha e mbiemrit eshte e zbrazet
-    if(empty($mbiemri)) {
-        $errorMbiemri = "Surname field is required!";
+    if(empty($surname)){
+        $errorSurname = "Surname field is required!";
         $register = false;
     }
+
+    //nese mbiemri permban edhe karaktere tjera jo-shkronje
     else {
-        //nese mbiemri permban edhe karaktere tjera jo-shkronje
-        if(!preg_match("/^[a-zA-Z ]*$/", $mbiemri)) {
-            $errorMbiemri = "Surname should contain characters only!";
+        if(!preg_match("/^[a-zA-Z ]*$/", $surname)){
+            $errorSurname =  "The surname must contain only letters!";
             $register = false;
         }
     }
+
     //nese fusha e email adreses eshte e zbrazet
     if(empty($email)) {
-        $errorEmail = "Email field is required!";
+        $errorEmail = "Email address field is required!";
         $register = false;
     }
+
     //email adresa ka vlere, validoje ate
     else {
         //nese formati i email adreses se shenuar nuk eshte i sakte
-        if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $errorEmail = "Please enter a valid email address.";
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            $errorEmail = "The email address format is incorrect!";
             $register = false;
         }
+
         //nese ekziston nje perdorues qe e ka kete email adrese
-        else if($countEmail != 0) {
-            $errorEmail = "This user already exists.";
+        else if($countEmail != 0){
+            $errorEmail = "This user doesn't exist!";
             $register = false;
         }
     }
-    if(empty($pass)) {
-        $errorPassword = "Password field is required!";
+
+    if(empty($password_1)){
+        $errorPassword1 = "Password field is required!";
         $register = false;
     }
 
     //fjalekalimi ka vlere, validoje ate
     else {
-        $uppercase = preg_match("@[A-Z]@", $pass);
-        $lowercase = preg_match("@[a-z]@", $pass);
-        $number = preg_match("@[0-9]@", $pass);
+        $uppercase = preg_match("@[A-Z]@", $password_1);
+        $lowercase = preg_match("@[a-z]@", $password_1);
+        $number = preg_match("@[0-9]@", $password_1);
 
         //nese fjalekalimi eshte i dobet
         //nese nuk plotesohet njeri nga kushtet e meposhtem atehere konsiderohet qe fjalekalimi eshte i dobet
-        if(!$uppercase || !$lowercase || !$number || strlen($pass) < 5) {
-            $errorPassword = "Weak password.";
-            $errorPassTooltip = "Password should have minimum 5 characters and should include an uppercase and a number!";
+        if(!$uppercase || !$lowercase || !$number || strlen($password_1) < 6){
+            $errorPassword1 = "Weak password!";
+            $errorPassTooltip = "Password must contain at least 6 characters, one capital letter and a number!";
             $register = false;
         }
     }
-    if($pass != $confirmpass)
+
+    if($password_1 != $password_2)
     {
-        $errorConfirmPass="Passwords don't match!";
+        $errorPassword2 ="The confirm password field must be the same as the password field!";
         $register=false;
     }
 
-    if($register == true) {
+    if($register == true){
 
+        //tani jemi gati te insertojme perdoruesin e ri ne db
         //ne rastin tone do te bejme nje insertim
         $querysql = "INSERT INTO perdoruesi
-			(id,roli_id,email,emri,mbiemri,nickname,password,foto,data_regj)
-			VALUES (NULL,1,'$email','$emri','$mbiemri','$nickname','$pass','src/assets/images/$foto','$data');";
+			(emri, mbiemri, email, password, roli)
+			VALUES ('$username', '$surname', '$email', '$password_1', 2);";
 
         //funksioni ne vazhdim perdoret per te ekzekutuar deklarata te shumta te sql query ne mysql
-        if (mysqli_multi_query($connect, $querysql)) {
-            echo '<script type="text/javascript">';
-            echo 'alert("Registered Successfully!")';
-            echo '</script>';
-            echo'<script> location.replace("login.php"); </script>';
+        if (mysqli_multi_query($connect, $querysql)){
+            header("Location: login.php");
+
         }
+
         else {
             echo '<script type="text/javascript">';
-            echo 'alert("Something went wrong!")';
+            echo 'alert("Ka ndodhur nje gabim ne insertim!")';
             echo '</script>';
         }
     }

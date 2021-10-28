@@ -44,8 +44,8 @@ if(isset($_SESSION['email']) && isset($_SESSION['roli'])) {
                                         </div>
                                         <div class="col-sm-8">
                                             <div class="detail">
-                                                <p class="detail-subtitle">New Orders</p>
-                                                <span class="number">6,267</span>
+                                                <p class="detail-subtitle">New bookings</p>
+                                                <span class="number">15,300</span>
                                             </div>
                                         </div>
                                     </div>
@@ -95,7 +95,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['roli'])) {
                                         <div class="col-sm-8">
                                             <div class="detail">
                                                 <p class="detail-subtitle">Page views</p>
-                                                <span class="number">28,210</span>
+                                                <span class="number">30,500</span>
                                             </div>
                                         </div>
                                     </div>
@@ -194,6 +194,10 @@ if(isset($_SESSION['email']) && isset($_SESSION['roli'])) {
                                                     <td class="text-end">18,210</td>
                                                 </tr>
                                                 <tr>
+                                                    <td><i class="flag-icon flag-icon-fr"></i> France</td>
+                                                    <td class="text-end">17,400</td>
+                                                </tr>
+                                                <tr>
                                                     <td><i class="flag-icon flag-icon-gb"></i> United Kingdom</td>
                                                     <td class="text-end">15,176</td>
                                                 </tr>
@@ -219,7 +223,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['roli'])) {
                                                 </tr>
                                                 <tr>
                                                     <td><i class="flag-icon flag-icon-nz"></i> New Zealand</td>
-                                                    <td class="text-end">1,700</td>
+                                                    <td class="text-end">10,700</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -244,44 +248,48 @@ if(isset($_SESSION['email']) && isset($_SESSION['roli'])) {
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>/about.html <a href="#"><i class="fas fa-link blue"></i></a></td>
-                                                    <td class="text-end">8,340</td>
+                                                    <td>/index.php <a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-end">30,350</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>/special-promo.html <a href="#"><i class="fas fa-link blue"></i></a></td>
-                                                    <td class="text-end">7,280</td>
+                                                    <td>/aboutus.php <a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-end">30,200</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>/products.html <a href="#"><i class="fas fa-link blue"></i></a></td>
-                                                    <td class="text-end">6,210</td>
+                                                    <td>/signup.php <a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-end">30,200</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>/documentation.html <a href="#"><i class="fas fa-link blue"></i></a></td>
-                                                    <td class="text-end">5,176</td>
+                                                    <td>/login.php <a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-end">30,200</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>/customer-support.html <a href="#"><i class="fas fa-link blue"></i></a></td>
-                                                    <td class="text-end">4,276</td>
+                                                    <td>/contact.php <a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-end">30,160</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>/index.html <a href="#"><i class="fas fa-link blue"></i></a></td>
-                                                    <td class="text-end">3,176</td>
+                                                    <td>/book.php <a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-end">30,005</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>/products-pricing.html <a href="#"><i class="fas fa-link blue"></i></a></td>
-                                                    <td class="text-end">2,176</td>
+                                                    <td>/gallery.php <a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-end">29,940</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>/product-features.html <a href="#"><i class="fas fa-link blue"></i></a></td>
-                                                    <td class="text-end">1,886</td>
+                                                    <td>/product-features.php <a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-end">29,880</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>/contact-us.html <a href="#"><i class="fas fa-link blue"></i></a></td>
-                                                    <td class="text-end">1,509</td>
+                                                    <td>/costumers.php <a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-end">29,300</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>/terms-and-condition.html <a href="#"><i class="fas fa-link blue"></i></a></td>
-                                                    <td class="text-end">1,100</td>
+                                                    <td>/tickets.php <a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-end">29,200</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>/inbox.php <a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-end">29,100</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -297,7 +305,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['roli'])) {
                                     <div class="row">
                                         <div class="dfd text-center">
                                             <i class="blue large-icon mb-2 fas fa-thumbs-up"></i>
-                                            <h4 class="mb-0">+21,900</h4>
+                                            <h4 class="mb-0">+25,000</h4>
                                             <p class="text-muted">FACEBOOK PAGE LIKES</p>
                                         </div>
                                     </div>
@@ -310,7 +318,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['roli'])) {
                                     <div class="row">
                                         <div class="dfd text-center">
                                             <i class="orange large-icon mb-2 fas fa-reply-all"></i>
-                                            <h4 class="mb-0">+22,566</h4>
+                                            <h4 class="mb-0">+28,550</h4>
                                             <p class="text-muted">INSTAGRAM FOLLOWERS</p>
                                         </div>
                                     </div>
@@ -323,8 +331,8 @@ if(isset($_SESSION['email']) && isset($_SESSION['roli'])) {
                                     <div class="row">
                                         <div class="dfd text-center">
                                             <i class="grey large-icon mb-2 fas fa-envelope"></i>
-                                            <h4 class="mb-0">+15,566</h4>
-                                            <p class="text-muted">E-MAIL SUBSCRIBERS</p>
+                                            <h4 class="mb-0">+10.000</h4>
+                                            <p class="text-muted">MESSAGES</p>
                                         </div>
                                     </div>
                                 </div>
@@ -336,7 +344,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['roli'])) {
                                     <div class="row">
                                         <div class="dfd text-center">
                                             <i class="olive large-icon mb-2 fas fa-dollar-sign"></i>
-                                            <h4 class="mb-0">+98,601</h4>
+                                            <h4 class="mb-0">+95,600</h4>
                                             <p class="text-muted">TOTAL SALES</p>
                                         </div>
                                     </div>

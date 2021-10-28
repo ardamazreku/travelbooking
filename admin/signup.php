@@ -18,19 +18,16 @@ if(!isset($_SESSION['email'])) {
 <body>
     <div class="wrapper">
         <?php
+        $errorGen = $errorName = $errorSurname = $errorEmail = $errorPassword1 = $errorPassword2 = $errorPassTooltip= "";
+        $username = $surname = $email = $password_1 = $password_2 ="";
 
-        $email = "";
-
-        $errorGen = $errorEmail =$errorPassword= $errorPassTooltip =$errorEmri = $errorMbiemri = $errorNickname = $errorFoto = $errorConfirmPass = "";
-
-        $email = $pass = $confirmpass = $emri = $mbiemri = $nickname = $foto = $data = "";
-
-        //kushti if ne kete rast do te plotesohet vetem pasi klikohet butoni Submit ne formen
-        if($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
             //POST
-            include 'src/validate/SignupValidate.php';
+
+            include 'validate/SignUpValidate.php';
         }
         ?>
+
         <div class="auth-content">
             <div class="card">
                 <div class="card-body text-center">
@@ -41,30 +38,31 @@ if(!isset($_SESSION['email'])) {
                     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
                         <div class="mb-3 text-start">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" name="emri" class="form-control" placeholder="Enter Name" value="<?php echo $emri; ?>" required>
+                            <input type="text" name="username" class="form-control" placeholder="Enter Name" value="<?php echo $username; ?>" required>
                         </div>
+                        <?php echo "<span class='error'>$errorName<span>";?>
                         <div class="mb-3 text-start">
                             <label for="name" class="form-label">Surname</label>
-                            <input type="text" name="mbiemri" class="form-control" placeholder="Enter Surname" value="<?php echo $mbiemri; ?>" required>
+                            <input type="text" name="surname" class="form-control" placeholder="Enter Surname" value="<?php echo $surname; ?>" required>
                         </div>
-                        <input type="hidden" name="nickname" value="<?php echo $nickname; ?>">
+                        <?php echo "<span class='error'>$errorSurname<span>";?>
                         <div class="mb-3 text-start">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" name="email" class="form-control" placeholder="Enter Email" value="<?php echo $email;?>" required>
                         </div>
+                        <?php echo "<span class='error'>$errorEmail<span>";?>
                         <div class="mb-3 text-start">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" name="password" class="form-control" placeholder="Password" value="<?php echo $pass;?>">
-                            <?php echo "<span style='color: red;'>$errorPassword<span>";?>
+                            <input type="password" name="password_1" class="form-control" placeholder="Password" value="<?php echo $password_1;?>">
+                            <?php echo "<span style='color: red;'>$errorPassword1<span>";?>
                             <?php echo "<span style='color: red;'>$errorPassTooltip<span>";?>
                         </div>
                         <div class="mb-3 text-start">
                             <label for="password" class="form-label">Confirm Password</label>
                             </label>
-                            <input type="password" class="form-control" name="confirmpass" placeholder="Enter password again" value="<?php echo $confirmpass; ?>">
+                            <input type="password" class="form-control" name="password_2" placeholder="Enter password again" value="<?php echo $password_2; ?>">
                             <br />
-                            <?php echo "<span style='color: red;'>$errorConfirmPass<span>";?>
-                            <input type="hidden" name="data_regj"/ value ="<?php echo $data; ?>">
+                            <?php echo "<span style='color: red;'>$errorPassword2<span>";?>
                             <?php echo "<span style='color: red'>$errorGen<span>";?>
                         </div>
                         <button class="btn btn-primary shadow-2 mb-4" type="submit">Register</button>

@@ -5,8 +5,8 @@ require "../../../database/connect.php";
 
 //marrja e te dhenave me metoden GET
 if(isset($_SESSION['email']) && isset($_SESSION['roli']) && $_SESSION['roli'] == 1 && isset($_GET['id'])) {
-    $id = $_GET['id'];
 
+    $id = $_GET['id'];
     $deleteQuery = "DELETE FROM perdoruesi where id='$id'";
 
     //ekzekutimi i query-it per fshirjen

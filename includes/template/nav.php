@@ -18,7 +18,7 @@
 			if(isset($_SESSION['roli'])){
 				//administrator
 				if($_SESSION['roli'] == 1){
-                    echo '<a href="contact.php"> CONTACT </a>';
+                    echo '<a href="admin/login.php"> CONTACT </a>';
 				}
 
 				//klient

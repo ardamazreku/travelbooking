@@ -97,9 +97,7 @@ if($_SESSION['roli'] == 1) {
                                         <td title="roli"><?= $row['roli'] ?></td>
                                         <td><?= $row['r_pershkrimi'] ?></td>
                                         <td class="text-end">
-                                            <a href="permissions.html" class="btn btn-outline-secondary btn-rounded"><i class="fas fa-toggle-on"></i></a>
                                             <a href="" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
-                                            <a href="src/validate/deleteRoliDB.php?id=<?=$row['roli']?>" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 <?php endwhile; ?>

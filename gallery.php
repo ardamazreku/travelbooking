@@ -9,11 +9,8 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Gallery </title>
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-    <!-- Logo -->
     <link rel='shortcut icon' type='image/x-icon' href='images/travel.png'/>
-    
+
     <!-- Font awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
@@ -21,12 +18,15 @@ session_start();
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+
 <?php include "includes/template/nav.php";?>
 
 <!-- gallery section starts -->
-    
-    <h1 class="heading">
+
+<h1 class="heading">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Logo -->
         <span>T</span>
         <span>H</span>
         <span>E</span>

@@ -34,33 +34,33 @@ if(!isset($_SESSION['email'])) {
                     <div class="mb-4">
                         <img class="carousel-control-next-icon" src="../public/admin.png" alt="">
                     </div>
-                    <h6 class="mb-4 text-muted">Create new account</h6>
+                    <h6 class="mb-4 text-muted">Sign up</h6>
                     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
                         <div class="mb-3 text-start">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" name="username" class="form-control" placeholder="Enter Name" value="<?php echo $username; ?>" required>
+                            <input type="text" name="username" class="form-control" placeholder="Enter your name" value="<?php echo $username; ?>" required>
                         </div>
                         <?php echo "<span class='error'>$errorName<span>";?>
                         <div class="mb-3 text-start">
                             <label for="name" class="form-label">Surname</label>
-                            <input type="text" name="surname" class="form-control" placeholder="Enter Surname" value="<?php echo $surname; ?>" required>
+                            <input type="text" name="surname" class="form-control" placeholder="Enter your surname" value="<?php echo $surname; ?>" required>
                         </div>
                         <?php echo "<span class='error'>$errorSurname<span>";?>
                         <div class="mb-3 text-start">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" name="email" class="form-control" placeholder="Enter Email" value="<?php echo $email;?>" required>
+                            <input type="email" name="email" class="form-control" placeholder="Enter your email address" value="<?php echo $email;?>" required>
                         </div>
                         <?php echo "<span class='error'>$errorEmail<span>";?>
                         <div class="mb-3 text-start">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" name="password_1" class="form-control" placeholder="Password" value="<?php echo $password_1;?>">
+                            <input type="password" name="password_1" class="form-control" placeholder="Enter your password" value="<?php echo $password_1;?>">
                             <?php echo "<span style='color: red;'>$errorPassword1<span>";?>
                             <?php echo "<span style='color: red;'>$errorPassTooltip<span>";?>
                         </div>
                         <div class="mb-3 text-start">
                             <label for="password" class="form-label">Confirm Password</label>
                             </label>
-                            <input type="password" class="form-control" name="password_2" placeholder="Enter password again" value="<?php echo $password_2; ?>">
+                            <input type="password" class="form-control" name="password_2" placeholder="Enter your password again" value="<?php echo $password_2; ?>">
                             <br />
                             <?php echo "<span style='color: red;'>$errorPassword2<span>";?>
                             <?php echo "<span style='color: red'>$errorGen<span>";?>

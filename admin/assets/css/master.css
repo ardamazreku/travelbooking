@@ -301,9 +301,9 @@ table.dataTable>tbody>tr.child ul.dtr-details {
 
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
-    color: #007bff;
+    color: #5F9EA0;
     background-color: #fff;
-    border-bottom: 2px solid #22a1f9;
+    border-bottom: 2px solid #5F9EA0;
 
 }
 

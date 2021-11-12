@@ -138,7 +138,7 @@ if(isset($_POST["send"]))
 <?php include "includes/template/footer.php";?>
 
 <?php
-$conn=mysqli_connect("localhost: 3307","root","","travelbooking");
+$conn=mysqli_connect("localhost: 3306","root","","travelbooking");
 mysqli_select_db($conn,'travelbooking');
 
 $email = $_SESSION['email'];

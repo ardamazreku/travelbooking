@@ -48,7 +48,7 @@ session_start();
                 else if($_SESSION['roli'] == 2){
                     echo '<a href="gallery.php">GALLERY</a>
                           <a href="book.php"> BOOK </a>
-                          <a href="contact.php"> CONTACT </a>';
+                          <a href="contact.php"> CONTACT US </a>';
                 }
             }
             echo '<a href = "includes/validate/logout.php"> LOG OUT </a>';

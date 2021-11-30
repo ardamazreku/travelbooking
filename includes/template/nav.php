@@ -18,14 +18,14 @@
 			if(isset($_SESSION['roli'])){
 				//administrator
 				if($_SESSION['roli'] == 1){
-                    echo '<a href="admin/login.php"> CONTACT </a>';
+                    echo '<a href="admin/login.php"> CONTACT US </a>';
 				}
 
 				//klient
 				else if($_SESSION['roli'] == 2){
                     echo '<a href="gallery.php">GALLERY</a>
                           <a href="book.php"> BOOK </a>
-                          <a href="contact.php"> CONTACT </a>';
+                          <a href="contact.php"> CONTACT US </a>';
                 }
 			}
 			echo '<a href = "includes/validate/logout.php"> LOG OUT </a>';

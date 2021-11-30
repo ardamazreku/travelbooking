@@ -12,7 +12,7 @@
             <a href="aboutus.php">About us</a>
             <a href="book.php">Book</a>
             <a href="gallery.php">Gallery</a>
-            <a href="contact.php">Contact</a>
+            <a href="contact.php">Contact us</a>
         </div>
         <div class="box">
             <h3>Contact us </h3>

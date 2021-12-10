@@ -71,7 +71,7 @@ if(!isset($_SESSION['email'])){
             <?php echo "<span class='error'>$errorGen<span>";?>
         <div class="signup_link">
           Already a member?
-          <a href="login.php">Log in</a>
+            <a href="login.php">Log in</a>
         </div>
       </form>
     </div>

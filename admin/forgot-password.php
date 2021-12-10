@@ -21,7 +21,7 @@ if(!isset($_SESSION['email'])) {
                     <div class="mb-4">
                         <img class="carousel-control-next-icon" src="../public/pass.jpg" alt="">
                     </div>
-                    <h6 class="mb-4 text-muted">Reset Password</h6>
+                    <h5 class="mb-4 text-muted">Reset Password</h5>
                     <?php
                         $email = $newPass = "";
 

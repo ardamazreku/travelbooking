@@ -15,5 +15,8 @@
         <li>
             <a href="inboxdb.php"><i class="fas fa-envelope"></i>Inbox</a>
         </li>
+        <li>
+            <a href="book.php"><i class="fas fa-plane"></i>Packages</a>
+        </li>
     </ul>
 </nav>

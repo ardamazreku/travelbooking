@@ -10,7 +10,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['roli'])) {
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <title>Inbox</title>
+            <title>Packages</title>
             <link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
             <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
             <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
@@ -25,33 +25,33 @@ if(isset($_SESSION['email']) && isset($_SESSION['roli'])) {
                 <?php include 'src/components/navbarProfile.php'?>
                 <div class="content">
                     <div class="container">
-                        <div class="page-title">
-                            <h3>Inbox
-                            </h3>
-                        </div>
                         <div class="box box-primary">
                             <div class="box-body">
                                 <table width="100%" class="table table-hover" id="dataTables-example">
                                     <thead>
                                     <tr>
-                                        <th class="col-lg-2">Email</th>
-                                        <th class="col-lg-3">Title</th>
-                                        <th class="col-lg-3">Message</th>
+                                        <th class="col-lg-2">Id</th>
+                                        <th class="col-lg-3">Emri</th>
+                                        <th class="col-lg-3">Pershkrimi</th>
+                                        <th class="col-lg-1">Fotografia</th>
+                                        <th class="col-lg-1">Link</th>
                                         <th class="col-lg-1"></th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <?php
                                     require "../database/connect.php";
-                                    $stmt = $connect->prepare("SELECT * FROM inbox");
+                                    $stmt = $connect->prepare("SELECT * FROM packages");
                                     $stmt->execute();
                                     $result = $stmt->get_result();
                                     while($row = $result->fetch_assoc()):
                                         ?>
                                         <tr>
-                                            <td><?= $row['email'] ?></td>
-                                            <td><?= $row['title'] ?></td>
-                                            <td><?= $row['message'] ?></td>
+                                            <td><?= $row['p_id'] ?></td>
+                                            <td><?= $row['emri'] ?></td>
+                                            <td><?= $row['pershkrimi'] ?></td>
+                                            <td><?= $row['fotografia'] ?></td>
+                                            <td><?= $row['link'] ?></td>
                                             <td>Active</td>
                                         </tr>
                                     <?php endwhile; ?>

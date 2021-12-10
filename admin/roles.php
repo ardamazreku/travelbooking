@@ -30,7 +30,7 @@ if($_SESSION['roli'] == 1) {
                         <a href="users.php" class="btn btn-sm btn-outline-info float-end me-1"><i class="fas fa-angle-left"></i> <span class="btn-header">Return</span></a>
                         <div id="myTab" role="tablist" class="nav">
                             <a href="#home" id="home-tab" data-bs-toggle="tab" role="tab" aria-controls="home" aria-selected="false" class="btn btn-sm btn-outline-primary float-start nav-link">
-                            <i class="fas fa-plus-circle"></i> Add</a>
+                            <i class="fas fa-plus-circle"></i>Add</a>
                         </div>
                     </div>
                     <!-- ADD ROLE -->
@@ -96,9 +96,7 @@ if($_SESSION['roli'] == 1) {
                                     <tr>
                                         <td title="roli"><?= $row['roli'] ?></td>
                                         <td><?= $row['r_pershkrimi'] ?></td>
-                                        <td class="text-end">
-                                            <a href="" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
-                                        </td>
+                                        <td>Active</td>
                                     </tr>
                                 <?php endwhile; ?>
                                 </tbody>

@@ -36,7 +36,7 @@ if(!isset($_SESSION['email'])) {
                     <div class="mb-4">
                         <img class="carousel-control-next-icon" src="../public/admin.png" alt="">
                     </div>
-                    <h6 class="mb-4 text-muted">Log in</h6>
+                    <h5 class="mb-4 text-muted">Log in</h5>
                     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
                         <div class="mb-3 text-start">
                             <label for="email" class="form-label">Email</label>

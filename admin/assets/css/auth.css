@@ -1,5 +1,4 @@
 body {
-    background: #373b3e;
     font-family: 'Nueva Std', sans-serif;
     background: #111111;
 }
@@ -32,7 +31,7 @@ body {
     -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
     box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
     border: none;
-    border-radius: 25px;
+    border-radius: 30px;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
@@ -53,8 +52,7 @@ body {
 
 .shadow-2 {
     -webkit-box-shadow: #5F9EA0;
-    box-shadow: #5F9EA0;
-}
+    box-shadow: #86b7fe;
 
 p.text-muted {
     font-size: 14px;
@@ -62,7 +60,7 @@ p.text-muted {
 }
 
 .mb4 {
-    color: #5F9EA0;
+    color: #86b7fe;
 }
 
 .btn {
@@ -77,6 +75,6 @@ p.text-muted {
 
 .wrapper a,
 .wrapper p>a {
-    color: #5F9EA0;
+    color: #86b7fe;
     font-weight: 600;
 }

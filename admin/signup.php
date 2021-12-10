@@ -34,7 +34,7 @@ if(!isset($_SESSION['email'])) {
                     <div class="mb-4">
                         <img class="carousel-control-next-icon" src="../public/admin.png" alt="">
                     </div>
-                    <h6 class="mb-4 text-muted">Sign up</h6>
+                    <h5 class="mb-4 text-muted">Sign up</h5>
                     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
                         <div class="mb-3 text-start">
                             <label for="name" class="form-label">Name</label>
@@ -65,7 +65,7 @@ if(!isset($_SESSION['email'])) {
                             <?php echo "<span style='color: red;'>$errorPassword2<span>";?>
                             <?php echo "<span style='color: red'>$errorGen<span>";?>
                         </div>
-                        <button class="btn btn-primary shadow-2 mb-4" type="submit">Register</button>
+                        <button class="btn btn-primary shadow-2 mb-4" type="submit">Sign up</button>
                     </form>
                     <p class="mb-0 text-muted">Already have an account? <a href="login.php">Log in</a></p>
                 </div>

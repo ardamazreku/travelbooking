@@ -44,7 +44,7 @@ if(!isset($_SESSION['email'])) {
                         </div>
                         <button class="btn btn-primary shadow-2 mb-4" type="submit">Reset Password</button>
                     </form>
-                    <p class="mb-0 text-muted">Don’t have an account? <a href="signup.php">Sign up</a></p>
+                    <p class="mb-0 text-muted">Not a member? <a href="signup.php">Sign up</a></p>
                 </div>
             </div>
         </div>

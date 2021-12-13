@@ -25,6 +25,9 @@ if(isset($_SESSION['email']) && isset($_SESSION['roli'])) {
                 <?php include 'src/components/navbarProfile.php'?>
                 <div class="content">
                     <div class="container">
+                        <div class="page-title">
+                            <h3>Packages</h3>
+                        </div>
                         <div class="box box-primary">
                             <div class="box-body">
                                 <table width="100%" class="table table-hover" id="dataTables-example">

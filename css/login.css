@@ -170,13 +170,13 @@ input[type="submit"]:hover{
 .signup_link{
   margin: 30px 0;
   text-align: center;
-  font-size: 15px;
+  font-size: 17px;
   color: #666666;
 }
 .signup_link a{
   color: #2691d9;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 17px;
 }
 .signup_link a:hover{
   text-decoration: underline;

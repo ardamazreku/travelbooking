@@ -52,7 +52,7 @@ if(!isset($_SESSION['email'])) {
                         <button class="btn btn-primary shadow-2 mb-4" type="submit">Log in</button>
                     </form>
                     <p class="mb-2 text-muted">Forgot password? <a href="forgot-password.php">Reset</a></p>
-                    <p class="mb-0 text-muted">Don't have account yet? <a href="signup.php">Sign up</a></p>
+                    <p class="mb-0 text-muted">Not a member? <a href="signup.php">Sign up</a></p>
                 </div>
             </div>
         </div>

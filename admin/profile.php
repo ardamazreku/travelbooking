@@ -22,6 +22,8 @@ if(isset($_SESSION['email'])) {
 <?php include 'src/components/navbar.php'?>
     <div id="body" class="active">
         <?php include 'src/components/navbarProfile.php'?>
+        <br>
+         <br>
         <div class="content">
             <div class="container">
             <div class="row">
@@ -29,7 +31,7 @@ if(isset($_SESSION['email'])) {
                     <div class="card">
                         <div class="card-header">Account Details</div>
                         <div class="card-body">
-                            <h5 class="card-title"> Personal Information </h5>
+                            <h5 class="card-title">Personal Information</h5>
                             <?php
                                 require "../database/connect.php";
                                 $stmt = $connect->prepare("SELECT * FROM perdoruesi WHERE email='$email'");
@@ -64,7 +66,7 @@ if(isset($_SESSION['email'])) {
                                     </div>
                                 </div>
                                 <div><br/></div>
-                                <h5 class="card-title"> Reset your password </h5>
+                                <h5 class="card-title">Reset your password</h5>
                                 <div class="mb-3 row">
                                     <label class="col-sm-2 form-label" for="email">Current Password<span style="color:red">*</span></label>
                                     <div class="col-sm-10">

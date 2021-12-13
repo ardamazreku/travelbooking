@@ -67,7 +67,7 @@ if(!isset($_SESSION['email'])) {
                         </div>
                         <button class="btn btn-primary shadow-2 mb-4" type="submit">Sign up</button>
                     </form>
-                    <p class="mb-0 text-muted">Already have an account? <a href="login.php">Log in</a></p>
+                    <p class="mb-0 text-muted">Already a member? <a href="login.php">Log in</a></p>
                 </div>
             </div>
         </div>

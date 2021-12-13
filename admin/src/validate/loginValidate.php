@@ -1,7 +1,7 @@
 <?php
 
 //konektimi me db
-$server = 'localhost:3306';
+$server = 'localhost:3307';
 $user = 'root';
 $password = '';
 $dbName = 'travelbooking';

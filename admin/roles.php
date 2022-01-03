@@ -45,7 +45,7 @@ if($_SESSION['roli'] == 1) {
                                             $roli = $r_pershkrimi = "";
                                             $errorRoli = $errorR_pershkrimi = $errorGen = "";
                                             if($_SERVER['REQUEST_METHOD'] == 'POST') {
-                                                include 'src/validate/addRoli.php';
+                                                include 'src/validate/addRoliDB.php';
                                             }
                                         ?>
                                         <form accept-charset="utf-8" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
@@ -83,6 +83,7 @@ if($_SESSION['roli'] == 1) {
                                         <th>Role ID</th>
                                         <th>Description</th>
                                         <th></th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -97,8 +98,11 @@ if($_SESSION['roli'] == 1) {
                                         <td title="roli"><?= $row['roli'] ?></td>
                                         <td><?= $row['r_pershkrimi'] ?></td>
                                         <td>Active</td>
+                                        <td>
+                                            <a href="updateRoli.php" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                                        </td>
                                     </tr>
-                                <?php endwhile; ?>
+                                    <?php endwhile; ?>
                                 </tbody>
                             </table>
                         </div>

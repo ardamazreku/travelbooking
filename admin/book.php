@@ -38,7 +38,6 @@ if(isset($_SESSION['email']) && isset($_SESSION['roli'])) {
                                         <th class="col-lg-3">Pershkrimi</th>
                                         <th class="col-lg-1">Fotografia</th>
                                         <th class="col-lg-1">Link</th>
-                                        <th class="col-lg-1">Delete</th>
                                         <th class="col-lg-1"></th>
                                     </tr>
                                     </thead>
@@ -56,9 +55,6 @@ if(isset($_SESSION['email']) && isset($_SESSION['roli'])) {
                                             <td><?= $row['pershkrimi'] ?></td>
                                             <td><?= $row['fotografia'] ?></td>
                                             <td><?= $row['link'] ?></td>
-                                            <td>
-                                                <a href="src/validate/deleteBooks.php?id=<?=$row['p_id']?>" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
-                                            </td>
                                             <td></td>
                                         </tr>
                                     <?php endwhile; ?>
